@@ -1,0 +1,52 @@
+
+{
+    "name": "Web development codespace",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "forwardPorts": [3000, 5500, 8000, 8080, 3001],
+    "portsAttributes": {
+        "3000": {
+            "label": "React /nextJS application",
+            "onAutoForward": "notify"
+        },
+        "5500" : {
+            "label": "live server",
+            "onAutoForward": "notify"
+        },
+        "8000" : {
+            "label": "Python/Django",
+            "onAutoForward": "notify"
+        },
+        "8080" : {
+            "label": "Alternative web server",
+            "onAutoForward": "notify"
+        },
+        "3001" : {
+            "label": "Alternative React server",
+            "onAutoForward": "notify"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ritwickdey.LiveServer",
+                "vercel.serve",
+                "azemoh.one-monokai",
+                "ms-python.python"
+            ],
+            "settings": {
+                "workbench.colorTheme": "Monokai Dimmed",
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "LiveServer.settings.port": "5500",
+                "files.autoSave": "onWindowChange",
+                "editor.fontSize": 18
+                
+
+            }
+        }
+    },
+    "workspaceFolder": "/workspace",
+    "remoteUser": "vscode",
+    "postCreateCommand": "echo DEV enviroment ready!!! 🚀"
+}
