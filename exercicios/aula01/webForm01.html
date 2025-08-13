@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Example sign up form</title>
+    <link rel="stylesheet" href="webForm.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <!-- Google Forms style header -->
+      <div class="form-header">
+        <h1>WE LOVE ADO!</h1>
+        <div class="form-description">
+          Show your love for ADO by filling out this form! Let us know how much
+          you appreciate her amazing music. 🎵
+        </div>
+      </div>
+
+      <!-- Question 1: Name -->
+      <div class="question-card">
+        <div class="question-title">
+          What's your name? <span class="question-required">*</span>
+        </div>
+        <input
+          type="text"
+          class="text-input"
+          placeholder="Your answer"
+          onfocus="this.parentElement.classList.add('focused')"
+          onblur="this.parentElement.classList.remove('focused')"
+        />
+        <div class="image-container">
+          <img
+            src="./public/ado_nah_id_win.jpg"
+            alt="ADO Image"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <!-- Question 2: Rating scale -->
+      <div class="question-card">
+        <div class="question-title">
+          On a scale of 1 to 10, how much do you love ADO?
+          <span class="question-required">*</span>
+        </div>
+        <div class="slider-labels">
+          <span>1 - Not much</span>
+          <span>10 - OBSESSED! 🔥</span>
+        </div>
+        <div class="slider-container">
+          <input
+            type="range"
+            id="slider1"
+            min="1"
+            max="10"
+            step="1"
+            value="5"
+          />
+          <span class="range-value" id="slider1-value">5</span>
+        </div>
+        <div class="image-container">
+          <img
+            src="./public/ado_cutie_patotie.jpg"
+            alt="ADO Image"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <!-- Question 3: Multiple choice -->
+      <div class="question-card">
+        <div class="question-title">
+          Have you ever been to an ADO show?
+          <span class="question-required">*</span>
+        </div>
+        <div class="checkbox-group">
+          <div class="checkbox-option">
+            <input type="radio" id="show-yes" name="ado-show" value="yes" />
+            <label for="show-yes">Yes, and it was AMAZING! ✨</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="radio" id="show-no" name="ado-show" value="no" />
+            <label for="show-no">No, but I really want to go 😭</label>
+          </div>
+        </div>
+        <div class="image-container">
+          <img
+            src="./public/ado_donut_shop.jpg"
+            alt="ADO Image"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <!-- Question 4: Long text -->
+      <div class="question-card">
+        <div class="question-title">
+          If yes, describe how good the experience was 🚀
+        </div>
+        <input
+          type="text"
+          class="text-input"
+          placeholder="It was perfect, her voice is amazing and when I first saw her sing I felt like I was blessed by some type of angel"
+          onfocus="this.parentElement.classList.add('focused')"
+          onblur="this.parentElement.classList.remove('focused')"
+        />
+        <div class="image-container">
+          <img
+            src="./public/ado_lock_in_bruh.jpg"
+            alt="ADO Image"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <!-- Question 5: Another rating -->
+      <div class="question-card">
+        <div class="question-title">
+          On a scale of 1 to 10, how much do you love ADO? (Yes, we asked twice
+          because she's that good!) <span class="question-required">*</span>
+        </div>
+        <div class="slider-labels">
+          <span>1 - Meh</span>
+          <span>10 - QUEEN! 👑</span>
+        </div>
+        <div class="slider-container">
+          <input
+            type="range"
+            id="slider2"
+            min="1"
+            max="10"
+            step="1"
+            value="5"
+          />
+          <span class="range-value" id="slider2-value">5</span>
+        </div>
+        <div class="image-container">
+          <img
+            src="./public/ado_sigma.jpg"
+            alt="ADO Image"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <!-- Quiz section -->
+      <div class="question-card quiz-section">
+        <div class="quiz-title">🎵 Only true ADO fans get this one right!</div>
+        <div class="quiz-question" id="question"></div>
+        <div class="quiz-options" id="options"></div>
+        <button class="submit-button" id="submit">Submit Quiz</button>
+        <div id="result-container"></div>
+      </div>
+
+      <!-- Final submit button -->
+      <div class="question-card">
+        <button class="submit-button" id="submit-form">Submit Form 🚀</button>
+        <div id="form-result"></div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
