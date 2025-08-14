@@ -1,0 +1,72 @@
+* {
+  font-size: 35px;
+}
+
+.tabela {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #ccc;
+  gap: 1rem;
+}
+
+.tabela-title {
+  margin: 10px 13px;
+}
+
+.tabela th {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 4px 100px;
+  text-align: center;
+}
+
+.tabela th:hover {
+  text-decoration: underline;
+  color: chartreuse;
+}
+
+.tabela td {
+  text-align: center;
+}
+
+.tabela tr:nth-child(2n) {
+  background-color: gray;
+}
+
+.tabela tr:nth-child(2n + 1) {
+  background-color: dimgray;
+}
+
+.tabela td:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: chartreuse;
+}
+
+/* Formulario feedback */
+section {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.name-box {
+  padding: 10px;
+  margin: 20px 10px;
+}
+
+.email-box {
+  padding: 10px;
+  margin: 20px 10px;
+}
+
+.feedback-box {
+  padding: 10px;
+  margin: 20px 10px;
+}
+
+.form-box {
+  border: 5px solid chartreuse;
+  border-radius: 10px;
+}

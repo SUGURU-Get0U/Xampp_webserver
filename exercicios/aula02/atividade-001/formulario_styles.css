@@ -1,0 +1,38 @@
+/* CSS CLASS 001 */
+
+/*Let's start by setting up a root */
+:root {
+  --pretinhoprovocante: #141325;
+  --greyforborders: #ccc;
+  --paddingforquestionblocks: 5px;
+}
+
+/* the * is the universal edit in css
+it edits everything on the html */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+.form-container {
+  max-width: 730px;
+  margin: 20px auto;
+}
+
+.question-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 20px auto;
+}
+/* a padding is the inner space between each block */
+
+.text-container {
+  padding: var(--paddingforquestionblocks);
+  border: 3px solid black;
+  border-radius: 3px;
+  border-top: none;
+  border-right: none;
+  border-left: hidden;
+  border-bottom: 3px dotted var(--greyforborders);
+}

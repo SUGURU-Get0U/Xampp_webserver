@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Xampp form</title>
+    <link rel="stylesheet" href="formulario_styles.css" />
+  </head>
+  <body>
+    <!-- create the div that will contain the form -->
+    <div class="form-container">
+
+      <!-- This is the form header, it will contain a header and a small description -->
+      <div class="form-header">
+        <h1>Welcom to the super form</h1>
+        <div class="form-description">
+          <h2>Show us how much you know about forms by signing this one up</h2>
+        </div>
+      </div>
+
+      <!-- Now, we make a div for each of the questions we have on the form -->
+      <div class="question-card">
+        <div class="question-title">
+          What's your name?
+          <span class="question-required">*</span>
+        </div>
+        <input
+          type="text"
+          class="text-container"
+          placeholder="Ado cado avocado"
+        />
+        <!-- we can add some JS to make it look like a google forms form -->
+      </div>
+
+      <!-- Surname question -->
+      <div class="question-card">
+        <div class="question-title">
+          What's your last name?
+          <span class="question-required">*</span>
+        </div>
+        <input type="text" class="text-container" placeholder="..." />
+        <!-- we can add some JS to make it look like a google forms form -->
+      </div>
+
+      <!--Email question-->
+      <div class="question-card">
+        <div class="question-title">
+          What's your email?
+          <span class="question-required">*</span>
+        </div>
+        <input
+          type="email"
+          class="email-container"
+          placeholder="Ado123@gmail.com"
+        />
+        <!-- we can add some JS to make it look like a google forms form -->
+      </div>
+
+      <!--Testing the number input-->
+      <div class="question-card">
+        <div class="question-title">
+          <h2>What's your phone number</h2><span class="question-required">*</span>
+        </div>
+        <input
+        type="number"
+        class="text-container"
+        placeholder="+55 (41) 98765-4321"
+      />
+      </div>
+     
+      <!--Password-->
+     <div class="question-card">
+      <div class="question-title">
+        <h2>Enter a Password</h2>
+        <span class="question-required">*</span>
+      </div>
+      <input type="password" class="text-container" placeholder="potato123">
+     </div>
+    </div>
+    </div>
+
+  
+
+    
+  </body>
+</html>
