@@ -1,5 +1,8 @@
 * {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 :root {
@@ -10,55 +13,241 @@
   --brancoTextos: #ffffff;
 }
 
-/*o Body precisa de Flex para
- centralizar o card*/
-
-body {
-  background-color: var(--begeAreaTexto);
+/* gradient bg */
+:root {
+  --gradientBtn: linear-gradient(
+    to right,
+    rgb(149, 14, 252),
+    rgb(67, 231, 173),
+    rgb(226, 212, 92)
+  );
+  --gradientCard: linear-gradient(to right, white 10%, #722f37);
 }
+
+/* O Body precisa de Flex para centralizar o card */
+body {
+  background-image: linear-gradient(45deg, black 10%, #221133);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza verticalmente também */
+  min-height: 100vh; /* Usa viewport height ao invés de pixels fixos */
+  width: 100%; /* Usa 100% ao invés de pixels fixos para responsividade */
+  margin: 0;
+  padding: 20px; /* Adiciona padding para evitar que o card grude nas bordas */
+}
+
 /* Definindo a altura principal */
 /* Centralizando o Card */
 .lecture-card {
-  width: 300px;
+  margin-top: 15px;
+  background: var(
+    --gradientCard
+  ); /* CORREÇÃO: Usa background ao invés de background-color para gradient */
+  max-width: 300px;
   height: 390px;
   display: flex;
   flex-direction: column;
+  border-radius: 8px; /* Adiciona bordas arredondadas para melhor visual */
+  overflow: hidden; /* Garante que o conteúdo não vaze das bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra para destacar o card */
 }
 
-/* setar o tamanho da aba header */
+/* Setar o tamanho da aba header */
 .card-header {
   background-color: var(--bordoPrincipal);
   text-align: center;
   color: var(--brancoTextos);
   width: 100%;
-  height: 20px;
-  flex-wrap: wrap;
+  height: 30px; /* Aumenta altura para melhor legibilidade */
+  display: flex; /* CORREÇÃO: Adiciona flex para centralizar o texto verticalmente */
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .card-subtitle {
-  background-color: var(--bordoSemiPrincipal);
+  background: linear-gradient(
+    to right,
+    rgb(255, 206, 206) 0.1%,
+    var(--bordoPrincipal) 95%
+  );
+  font-weight: 600;
+  display: flex;
   width: 100%;
-  height: 100px;
+  height: 40px;
   color: var(--brancoTextos);
   text-align: center;
   justify-content: center;
+  align-items: center; /* CORREÇÃO: Centraliza verticalmente */
+  padding: 0 10px; /* CORREÇÃO: Simplifica o padding */
 }
 
 .card-main-content {
-  background-color: var(--bordoClaroAreaPesquisa);
+  display: flex;
+  background: linear-gradient(
+    to right,
+    rgb(255, 206, 206) 1%,
+    var(--bordoPrincipal) 95%
+  );
   width: 100%;
   height: 120px;
   color: var(--brancoTextos);
   text-align: center;
-  justify-content: center;
-  font-size: small;
+  align-items: center;
+  justify-content: center; /* CORREÇÃO: Adiciona centralização horizontal */
+  font-weight: 600;
+  padding: 10px; /* Adiciona padding interno */
 }
 
-.card-lecture-location {
-  background-color: var(--bordoSemiPrincipal);
+#card-lecture-location {
+  background-color: var(--bordoPrincipal);
   width: 100%;
-  height: 120px;
+  height: 50px;
+  color: var(--brancoTextos);
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  gap: 10px; /* CORREÇÃO: Aumenta o gap para melhor espaçamento */
+  padding: 0 10px;
+}
+
+/* Formatação do tamanho da imagem */
+#icon-container img {
+  color: white;
+  width: 24px; /* CORREÇÃO: Define tamanho específico ao invés de porcentagem */
+  height: 24px;
+  object-fit: contain; /* Garante que a imagem mantenha proporção */
+}
+
+/* About section */
+#card-about-container {
+  display: flex;
+  flex: 1; /* CORREÇÃO: Permite que esta seção ocupe o espaço restante */
+}
+
+#side-info-container {
+  padding-right: 10px; /* CORREÇÃO: Reduz padding para melhor proporção */
+  flex: 0 0 auto; /* Não cresce nem encolhe */
+}
+
+.card-lecture-time {
+  display: flex;
+  background-color: var(--bordoPrincipal);
+  height: 55px;
+  width: 120px; /* CORREÇÃO: Define largura fixa ao invés de porcentagem que estava quebrando */
   color: var(--brancoTextos);
   text-align: center;
   justify-content: center;
+  font-size: 12px; /* CORREÇÃO: Usa tamanho específico ao invés de x-small */
+  font-weight: 600;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.card-lecturer {
+  background-color: var(--bordoPrincipal);
+  height: 35px;
+  width: 120px; /* CORREÇÃO: Define largura fixa ao invés de porcentagem */
+  color: var(--brancoTextos);
+  text-align: center;
+  display: flex; /* CORREÇÃO: Adiciona flex para centralização */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+.card-available-spots {
+  display: flex;
+  background-color: var(--bordoPrincipal);
+  height: 50px; /* CORREÇÃO: Reduz altura para melhor proporção */
+  width: 120px; /* CORREÇÃO: Define largura fixa */
+  color: var(--brancoTextos);
+  text-align: center;
+  justify-content: center;
+  font-size: 12px; /* CORREÇÃO: Usa tamanho específico */
+  font-weight: 600;
+  align-items: center;
+}
+
+.card-lorem-ipsum {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  flex: 1; /* CORREÇÃO: Permite que ocupe o espaço restante */
+  height: 162px; /* CORREÇÃO: Ajusta altura para se adequar ao layout */
+  color: black;
+  text-align: center;
+  justify-content: space-between;
+  padding: 10px; /* Adiciona padding interno */
+}
+
+.card-lorem-ipsum label {
+  width: 100%;
+  flex: 1; /* CORREÇÃO: Permite que o texto ocupe o espaço disponível */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+#button-container {
+  width: 100%;
+}
+
+#button-container button {
+  width: 100%;
+  height: 40px; /* CORREÇÃO: Reduz altura para melhor proporção */
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* -webkit eh um vendor prefix
+alguns navegadores nao funcionam o clip*/
+.btn-href {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-href label {
+  text-decoration: none;
+  font-size: 1.5rem; /* CORREÇÃO: Reduz tamanho para caber melhor */
+  background-image: var(--gradientBtn);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+  justify-content: center; /* CORREÇÃO: Centraliza ao invés de space-around */
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* ::AFTER cria um elemento logo depois do nosso 
+especificado, ou seja cria um content vazio logo 
+abaixo de label.*/
+.btn-href label::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-image: var(--gradientBtn);
+  border-radius: 0 0 4rem 4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* CORREÇÃO: Centraliza a linha decorativa */
+}
+
+/* CORREÇÃO: Adiciona posicionamento relativo para o ::after funcionar */
+.btn-href label {
+  position: relative;
 }

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Relief:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card exercises</title>
@@ -10,46 +16,46 @@
     <div class="lecture-card">
       <div class="card-header">Palestra</div>
       <div class="card-subtitle">
-        <p class="text-container">Engenharia da computaria</p>
+        <label class="text-container">Engenharia da computaria</label>
       </div>
       <div class="card-main-content">
-        <p class="small-header">
+        <label class="small-header">
           Pesquisa na área de Computaria Explorando fronteiras Tecnológicas
-        </p>
+        </label>
       </div>
-      <div class="card-lecture-location">
-        <div class="icon-container">
+      <div id="card-lecture-location">
+        <div id="icon-container">
           <img
             src="../public/icons/building-icon.png"
             alt="Prediozinho fofinho bunitinho"
           />
         </div>
-        <h3>Mario de Abreu - Bloco 3</h3>
+        <label>Mario de Abreu - Bloco 3</label>
       </div>
-      <div class="card-about-container">
-        <div class="card-lecture-time">
-          <time datetime="02/02/25">10:00 -> 11:00</time>
-        </div>
-        <div class="card-lecturer">
-          <h3>Emerson Paraiso</h3>
-        </div>
-        <div class="card-available-spots">
-          <h3>Vagas: 2/194</h3>
+      <div id="card-about-container">
+        <div id="side-info-container">
+          <div class="card-lecture-time">
+            <label>10:00 -> 11:00</label>
+          </div>
+          <div class="card-lecturer">
+            <label>Emerson Paraiso</label>
+          </div>
+          <div class="card-available-spots">
+            <label>Vagas: 2/194</label>
+          </div>
         </div>
         <div class="card-lorem-ipsum">
-          <h3>
+          <label>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem reiciendis iusto quis, possimus sint tempora eum
-            rerum voluptas, itaque similique provident, dolorem laborum.
-            Mollitia sint debitis quas rem illo possimus.
-          </h3>
-          <div class="button-container">
+            Exercitationem reiciendis
+          </label>
+          <div id="button-container">
             <button class="sign-up-btn">
-              <a href="../Main/index.html">
-                <h2>Inscreva-se!</h2>
+              <a class="btn-href" href="../Main/index.html">
+                <label>Inscreva-se!</label>
               </a>
             </button>
-          </div>
+          </div
         </div>
       </div>
     </div>
