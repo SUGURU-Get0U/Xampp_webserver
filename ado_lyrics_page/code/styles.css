@@ -1,13 +1,123 @@
 * {
   margin: 0;
   padding: 0;
+  color: azure;
 }
 
 body {
-  background: #06455e;
-  background: linear-gradient(
-    270deg,
-    rgba(6, 69, 94, 1) 77%,
-    rgba(44, 112, 92, 1) 100%
+  background: #3c0753;
+  background: radial-gradient(
+    circle,
+    rgba(60, 7, 83, 1) 0%,
+    rgba(23, 29, 60, 1) 100%
   );
+}
+
+.nav-bar {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 20px 0;
+}
+
+.nav-links {
+  flex-direction: row;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.link a {
+  text-decoration: none;
+  transition: transform 0.6s;
+}
+
+.link a:hover {
+  display: inline-block;
+  /* transform: rotate(360deg); */
+  animation: lambisgoia 2s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+main h1::before {
+  content: "Hello world";
+  animation: fade-in-out 2s linear infinite;
+}
+
+/*goated bouncing animation*/
+@keyframes lambisgoia {
+  0% {
+    transform: translateY(0px); /*strats at 0*/
+  }
+  20% {
+    transform: translateY(5px); /*takes a little squat*/
+  }
+  50% {
+    transform: translateY(-20px); /*propels itself in the air*/
+  }
+  90% {
+    transform: translateY(0px); /*goes back to start pos*/
+  }
+  100% {
+    transform: translateY(0px); /*goes back to start pos*/
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 1; /*It starts showing the text*/
+  }
+  25% {
+    opacity: 0.5; /*It starts to fade out*/
+  }
+  50% {
+    opacity: 0; /*Its gone lol*/
+  }
+  75% {
+    opacity: 0.5; /*It starts to fade in*/
+  }
+  100% {
+    opacity: 1; /*now its back*/
+  }
+}
+
+@keyframes language-transition {
+  0% {
+    content: "lyrics.com'a hoş geldiniz";
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    content: "Bienvenido a lyrics.com";
+  }
+  20% {
+    content: "欢迎来到 lyrics.com";
+  }
+  30% {
+    content: "Benvenuti su lyrics.com";
+  }
+  40% {
+    content: "lyrics.com에 오신 것을 환영합니다";
+  }
+  50% {
+    content: "Bem-vindo ao lyrics.com";
+  }
+  60% {
+    content: "lyrics.comへようこそ";
+  }
+  70% {
+    content: "Добро пожаловать на lyrics.com";
+  }
+  80% {
+    content: "Willkommen bei lyrics.com";
+  }
+  90% {
+    content: "Bienvenue sur lyrics.com";
+  }
+  100% {
+    content: "welcome to lyrics.com";
+  }
 }
