@@ -1,15 +1,6 @@
 /* window.onload para ele rodar o codigo quando
  * ele estiver pronto */
 
-function signup() {
-  let email = document.getElementById("e-mail");
-  let password = document.getElementById("password");
-}
-
-function is_higher() {
-  var valor1 = parseInt(document.getElementById("#"));
-  var valor2 = parseInt(document.getElementById("#"));
-}
 
 // Here we will create the functions for the operations in the calculator
 
@@ -24,9 +15,35 @@ by adding:
   catches the first integer, it will result in Nan (not a number)
 */
 function SUM() {
-  let n1 = document.getElementById("sum_n1");
-  let n2 = document.getElementById("sum_n2");
+  let n1 = parseInt(document.getElementById("sum_n1").value);
+  let n2 = parseFloat(document.getElementById("sum_n2").value);
 
   let result = n1 + n2;
   console.log(result)
+}
+function SUBTRACT() {
+  let n1 = parseInt(document.getElementById("sum_n1").value);
+  let n2 = parseFloat(document.getElementById("sum_n2").value);
+
+  let result = n1 - n2;
+  console.log(result)
+}
+function DIVIDE() {
+  let n1 = parseInt(document.getElementById("sum_n1").value);
+  let n2 = parseFloat(document.getElementById("sum_n2").value);
+
+  let result = n1 / n2;
+  console.log(result)
+}
+
+function MULTIPLY() {
+  let n1 = parseInt(document.getElementById("sum_n1").value);
+  let n2 = parseFloat(document.getElementById("sum_n2").value);
+
+  let result = n1 * n2;
+  console.log(result)
+}
+
+function DISPLAY() {
+  
 }

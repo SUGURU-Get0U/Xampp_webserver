@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 300px;
+    max-height: 100px;
+}
+
+:root {
+    --greyForBackground: #D3D3D3;
+    --cyan: #ADD8E6;
+}
+.elements {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--greyForBackground);
+}
+
+.numbers {
+    display: flex; 
+    width: 100%; 
+}
+
+.num {
+    justify-content: center;
+    width: 33%;
+}
+
+.row {
+    max-width: 150px;
+    width: 100%;
+}
+
+.operations {
+    display: flex;
+    flex-direction: column;
+}
+
+.op {
+    border: none;
+    width: 100%;
+}
+
+.equal {
+    border: none;
+    background-color: var(--cyan);
+    
+}
+
+.display-screen {
+    border: solid 2px black
+}
