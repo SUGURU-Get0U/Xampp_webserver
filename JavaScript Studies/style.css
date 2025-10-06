@@ -1,0 +1,81 @@
+:root {
+  --text: #333;
+  --white-hollow-Bg: #cccacac7;
+  --white-bg: #ffffff;
+  --verde: #4caf50;
+  --verde-escuro: #388e3c;
+  --border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 20;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+}
+
+body {
+  background-color: var(--white-hollow-Bg);
+  font-family: "Inter", sans-serif;
+}
+
+.login {
+  display: flex;
+  position: fixed;
+  /* top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; */
+  inset: 0;
+  backdrop-filter: blur(7px);
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--white-bg);
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+}
+
+form input {
+  width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button {
+  background-color: var(--verde);
+  color: var(--white-bg);
+  padding: 12px 20px;
+  font-family: inherit;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
