@@ -1,0 +1,103 @@
+:root {
+  --grey_text: #333;
+  --form_bg: #88726d;
+  --header_text: #fff;
+  --dark_maroon_border: #56423d;
+  --btn_dflt: #557d88;
+  --btn_hover: #c3d1d5;
+  --link_acc: #ffe5df;
+  --link_hover: #ff7e82;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  position: relative;
+
+  background-image: linear-gradient(
+    to right top,
+    #3f4a36,
+    #4b5641,
+    #56614d,
+    #636e59,
+    #6f7a65
+  );
+}
+
+.img__bg {
+  position: absolute;
+  /* Center the SVG relative to the body (which is now its parent) */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Precisely align the center point */
+
+  /* Make the SVG large and subtle */
+  width: 400px;
+  height: 400px;
+  opacity: 0.1;
+
+  /* Z-INDEX for the background */
+  z-index: 0;
+
+  /* Add the blur effect */
+  filter: blur(4px);
+}
+
+.signup__form {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--form_bg);
+  padding: 60px;
+  border: 1.4px solid var(--grey_text);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 1;
+
+  /* Z-INDEX for the foreground */
+  position: relative; /* Must be positioned to use z-index effectively */
+  z-index: 1;
+}
+.header {
+  color: var(--header_text);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup__form input {
+  padding: 6px;
+  border: none;
+}
+
+.submit__btn {
+  margin-top: 25px;
+  background-color: var(--btn_dflt);
+  border: 0.3px solid rgba(36, 76, 86);
+  box-shadow: 1px 2px 7px 3px rgba(36, 76, 86, 0.3);
+}
+
+.submit__btn:hover {
+  background-color: var(--btn_hover);
+  border: 0.3px solid rgba(195, 209, 213);
+  box-shadow: 1px 2px 7px 3px rgba(195, 209, 213, 0.3);
+}
+
+.signup__form a {
+  color: var(--link_acc);
+}
+
+.signup__form a:hover {
+  color: var(--link_hover);
+}
