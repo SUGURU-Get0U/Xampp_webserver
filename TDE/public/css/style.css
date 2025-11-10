@@ -1,0 +1,93 @@
+:root {
+    /* Color variables for the form */
+    --MainTextColor: #f1edff;
+    --InsideFormBG: #5cabaa;
+
+    /* Size variables for the form */
+    --Maxwidth: 400px;
+    --MaxHeight: 200px
+}
+
+* {
+    /* pretty font family */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    /* Set default values to Avoid pre-formatting conflict */
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body {
+    width: 100vw; /*Uses 100% of the VIEWPORT WIDTH*/
+    height: 100vh; /*Uses 100% of the VIEWPORT HEIGHT*/
+    background-image: linear-gradient(to right top, 
+    #141325, 
+    #3e3243, 
+    #695461, 
+    #957b81, 
+    #bfa5a4);
+}
+
+/* Login Form Title */
+
+.form__welcome__title {
+    font-weight: bold;
+    color: var(--MainTextColor);
+    font-size: 30px;
+    text-wrap: nowrap;
+}
+
+/* Login form style */
+
+#login__form {
+    /* Color configs */
+    color: var(--MainTextColor);
+    
+   background: rgba(255,255,255,0.05);
+    /* display configs */
+    z-index: 1;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login__form input {
+    outline: none;  /*Removes the inner box of the input*/
+    padding: 3px;
+    margin: 5px 0;
+}
+
+/* Submit Button */
+#submit__btn {
+    padding: 2px;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#login__form a {
+    color: var(--MainTextColor);
+    text-decoration: none;
+}
+
+#login__form a:hover {
+    color: var(--InsideFormBG);
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.radiance__svg__bg {
+    width: var(--Maxwidth);
+    height: var(--Maxwidth);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
