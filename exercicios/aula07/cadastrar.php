@@ -10,9 +10,11 @@
      "PUC@1234",
     "name_without_creativity");
 
-    $stmt = mysqli_stmt_init($con);
+    $stmt = mysqli_stmt_init($con); // Initiate a statement
     $query = "INSERT INTO Web_User(email, password, name_user, birthday) VALUES (?,?,?,?)";
+    // makes a query = to a INSERT of the data we just got!
     mysqli_stmt_prepare($stmt, $query);
+    // prepares the query, passing the connection to our database and our pre made query
     mysqli_stmt_bind_param($stmt, 'ss', $email, $password, $name, $birthday);
     $resultado = mysqli_stmt_execute($stmt);
 
