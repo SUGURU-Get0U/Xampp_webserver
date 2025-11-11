@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./public/assets/icons/ado_icon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./public/css/style.css">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/56cd374529.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="./dist/assets/icons/ado_store_icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+
+    <script src="./dist/js/login_atmp.js" defer></script>
     <title>Ado Store Login Page</title>
-</head>
-<body>
-    
-    <form id="login__form">
-        <label class="form__welcome__title">WELCOME TO THE ADO STORE!</label>
-        <span class="text__form__question">E-mail</span>
-        <input type="email" name="email" id="email" placeholder="AdoTheG0at@gmail.com">
-        <span class="text__form__question">Password</span>
-        <input type="password" name="pswd" id="pswd" placeholder="****">
-        <button id="submit__btn" type="submit">Log in</button>
-        <span class="has__account__button"><a href="#">Do not have an Account? Click Here!</a></span>
-    </form>
-    <img 
-        class="radiance__svg__bg"
-        src="./public/assets/The_Radiance_absolute_BG.png" alt="Radiance Absolute Pic">
-</body>
+  </head>
+  <body>
+    <div class="form__container">
+      <div class="ads__container">
+        <div class="logo__container">
+          <img
+            src="./dist/assets/logos/ado_logo_login.png"
+            alt="Ado random Image for the logo"
+          />
+          <label>Ado-rable CDs</label>
+        </div>
+      </div>
+      <div class="login__container">
+        <img
+          src="./dist/assets/kitty_login.jpg"
+          alt="Kitty listening to music"
+          class="kitty__img"
+        />
+        <img
+          src="./dist/assets/icons/ado_store_icon.png"
+          alt="ado store icon"
+          class="ado_store_icon"
+        />
+
+        <label>Millions of CDs</label>
+        <label>Available on Ado-rable CDs</label>
+        
+        <button type="button" id="signup_btn">Sign up free</button>
+        <button type="button" id="login_phone_number"> <i class="fa-solid fa-mobile-screen-button"></i>Continue with phone number</button>
+        </button>
+        <button type="button" id="login_email"><i class="fa-solid fa-paper-plane"></i>Continue with email</button>
+      </div>
+    </div>
+  </body>
 </html>
